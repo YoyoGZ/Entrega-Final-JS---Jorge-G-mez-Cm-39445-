@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,300&family=Roboto:wght@300;400&display=swap");
+body {
+  background-color: rgb(107, 209, 209);
+}
+
+.titumain {
+  display: block;
+  padding-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: "Roboto", "Sans Serif";
+  font-size: 1.7rem;
+}
+
+.titudos {
+  display: block;
+  padding-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: "Roboto", "Sans Serif";
+  font-size: 1.2rem;
+}
+
+.titudos2 {
+  display: flex;
+  display: block;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: "Roboto", "Sans Serif";
+  font-size: 1.2rem;
+  color: rgba(227, 22, 22, 0.886);
+}
+
+.botones {
+  display: flex;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: first baseline;
+  position: relative;
+  color: black;
+  background: rgb(214, 192, 228);
+  border-radius: 5px;
+  margin: 10px 15;
+  font-weight: 600;
+  padding: 3px;
+  box-shadow: 3px 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.botones:hover {
+  background-color: rgb(73, 88, 224);
+}
+
+.btnNvaCot {
+  display: flex;
+  align-items: right;
+  position: relative;
+  justify-content: space-around;
+  color: black;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin: 10px 15;
+  font-weight: 600;
+  padding: 3px;
+  box-shadow: 3px 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.btnNvaCot:hover {
+  background-color: rgb(147, 5, 40);
+}
+
+.titudos {
+  display: block;
+  padding-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: "Roboto", "Sans Serif";
+  font-size: 1.2rem;
+}
+
+.ubic-form {
+  position: relative;
+  display: flex;
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", "Sans Serif";
+  padding-top: 10px;
+  padding-left: 30px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.textoform {
+  position: relative;
+  display: flex;
+  display: block;
+  text-align: center;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: "Roboto", "Sans Serif";
+  padding-top: 20px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+h1 {
+  font-family: Roboto;
+  color: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: Roboto;
+  font-size: 4rem;
+  color: black;
+  text-align: center;
+}
+
+/*# sourceMappingURL=estilos.css.map */

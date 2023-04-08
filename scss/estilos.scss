@@ -1,0 +1,30 @@
+body{
+    background-color:rgb(107, 209, 209)
+};
+
+//imports
+@import "_comunes";
+
+h1{
+    font-family: Roboto;
+    color: black;
+};
+// Fonts
+
+// Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+//Nunito normal e Italico
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,300&family=Roboto:wght@300;400&display=swap');
+
+//Selector Reset
+*{
+    padding: 0;
+    margin: 0;
+};
+h1{
+    font-family: Roboto;
+    font-size: 4rem;
+    color: black;
+    text-align: center;
+};
