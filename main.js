@@ -1,3 +1,4 @@
+
 // ------- Botones de eleccion de vehiculo ---------
 
 localStorage.clear()
@@ -19,7 +20,7 @@ const elecVh = (id) => {
 let div = document.createElement("div");
 
 div.innerHTML = `
-  <h2 class = "titudos">Seleccione el vehículo a cotizar</h2>
+  <h2 class = "d-flex titudos">Seleccione el vehículo a cotizar</h2>
 `;
 
 contenedorA.append(div);
@@ -28,9 +29,9 @@ vehiculos.forEach((vehiculo) => {
   let boton = document.createElement("button");
   boton.innerText = vehiculo.nombre;
   boton.id = vehiculo.id;
-  boton.className ="botones";
-  boton.addEventListener("click", () => elecVh(vehiculo.id),
-  /* Toastify({
+  boton.className = "botones";
+  boton.addEventListener("click",() => elecVh(vehiculo.id),
+/*   Toastify({
     text: "This is a toast",
     duration: 5000,
     destination: "https://github.com/apvarun/toastify-js",
@@ -43,10 +44,9 @@ vehiculos.forEach((vehiculo) => {
       background: "linear-gradient(to right, #00b09b, #96c93d)",
     },
     onClick: function(){} // Callback after click
-  }).showToast(), */
+  }).showToast() */
   
-  div.append(boton))
-
+  div.append(boton));
 });
 
 // ------- Botones de eleccion de coberturas ---------
@@ -148,36 +148,37 @@ cotiza.addEventListener("click", () => {
 
    let contenedor = document.getElementById("contenedorD");
    contenedor.innerHTML = `
-     <h2 class = "titudos2">Se seleccionó cotizar:  ${vehiculo.nombre}, Con una:  ${cobertura.nombre}</h2>
-     <b class = "titudos2">Se incluyó un adicional de:  ${adicional.nombre}</b>
-     <p class = "titudos2">El precio total de la cotización es:  $${cotizacionTotal}</p>
+     <p className = "titudos2"> Se seleccionó cotizar: ${vehiculo.nombre} Con una: ${cobertura.nombre}<br>
+      Se incluyó un adicional de: ${adicional.nombre}<br>
+      El precio total de la cotización es: $${cotizacionTotal}</p>
    `;
     contenedor.append(contenedor); 
   }
+
+//  --------  Boton de Nueva Cotización ------
 )
 let nuevaCot = document.getElementById("nuevaCot"); 
 nuevaCot.addEventListener("click", () => {
-  var node = document.getElementById("contenedorD");
-    node.parentNode.removeChild(node);
-    localStorage.clear();
+  let limpia = document.getElementById("contenedorD");
+    limpia.parentNode.removeChild(limpia);
+    location.reload();
   }
 )
 console.log(nuevaCot);
 
 // ----- Inicia formulario -----
 
-/* let formulario = document.getElementById("formuCont");
+let formulario = document.getElementById("formuCont");
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
-      let inputs = e.target.children;
-        if (!inputs[0].value.includes("@")) {
-        inputs[0].value = "";
-
+      let elEmail = document.getElementById("ingrEmail");
+        if (elEmail.value.includes("@")) {
+        console.log("arroba");
+        } else {
+        elEmail.value = "";
         const errorMensaje = document.createElement('p');
-        errorMensaje.textContent = 'Por favor ingrese un correo electrónico válido';
-        errorMensaje.style.color = 'red';
+        errorMensaje.textContent = 'Por favor ingrese un correo electrónico válido'; 
         formulario.appendChild(errorMensaje);
-    }
-  }
-); */
+      }
+    });

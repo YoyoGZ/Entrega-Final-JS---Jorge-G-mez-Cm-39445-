@@ -15,42 +15,46 @@ body {
 
 .titudos {
   display: block;
-  padding-top: 20px;
-  margin-bottom: 5px;
+  position: relative;
+  align-items: center;
   text-align: center;
-  font-family: "Roboto", "Sans Serif";
+  font-family: "Roboto";
   font-size: 1.2rem;
+  color: rgb(88, 85, 85);
+  margin-left: 3rem;
+  margin-bottom: 0px;
+  margin-top: 2rem;
 }
 
 .titudos2 {
   display: flex;
-  display: block;
-  padding-top: 20px;
+  padding-top: 10px;
   margin-bottom: 10px;
+  margin-left: 25rem;
   text-align: center;
   font-family: "Roboto", "Sans Serif";
-  font-size: 1.2rem;
-  color: rgba(227, 22, 22, 0.886);
+  font-size: 1.3rem;
+  color: rgba(178, 10, 10, 0.886);
 }
 
 .botones {
   display: flex;
-  display: inline-flex;
-  justify-content: space-around;
-  align-items: first baseline;
+  display: inline;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   color: black;
-  background: rgb(214, 192, 228);
+  background: rgb(144, 40, 212);
   border-radius: 5px;
-  margin: 10px 15;
+  margin-left: 2em;
   font-weight: 600;
-  padding: 3px;
-  box-shadow: 3px 2px;
+  padding: 5px;
+  box-shadow: 10px 5px 8px 0px rgba(0, 0, 0, 0.24);
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .botones:hover {
-  background-color: rgb(73, 88, 224);
+  background-color: rgb(114, 127, 238);
 }
 
 .btnNvaCot {
@@ -64,21 +68,13 @@ body {
   margin: 10px 15;
   font-weight: 600;
   padding: 3px;
-  box-shadow: 3px 2px;
+  box-shadow: 10px 5px 8px 0px rgba(0, 0, 0, 0.24);
+  margin-left: 2em;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .btnNvaCot:hover {
   background-color: rgb(147, 5, 40);
-}
-
-.titudos {
-  display: block;
-  padding-top: 20px;
-  margin-bottom: 5px;
-  text-align: center;
-  font-family: "Roboto", "Sans Serif";
-  font-size: 1.2rem;
 }
 
 .ubic-form {
@@ -88,8 +84,10 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-family: "Roboto", "Sans Serif";
+  font-family: "Nunito", "Sans Serif";
+  margin-bottom: 25px;
   padding-top: 10px;
+  padding-bottom: 25px;
   padding-left: 30px;
   margin-left: 50px;
   margin-top: 10px;
@@ -104,10 +102,19 @@ body {
   justify-content: center;
   font-family: "Roboto", "Sans Serif";
   padding-top: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 .d-flex {
+  display: flex position center;
+  justify-content: center;
+  align-items: center;
+}
+
+.posicImg {
   display: flex;
+  position: sticky;
 }
 
 h1 {
