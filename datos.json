@@ -1,0 +1,11 @@
+[
+{ "id": 1, "nombre": "Cobertura A:", "texto": "Responsabibilidad Civil hacia Terceros"},
+{ "id": 2, "nombre": "Cobertura B:", "texto": "R.C. + Robo e Incendio Total"},
+{ "id": 3, "nombre": "Cobertura C:", "texto": "R.C. + Robo e Incendio Total y Parcial + Daños Totales por Accidente"},
+{ "id": 4, "nombre": "Cobertura D:", "texto": "R.C. + Robo e Incendio Total y Parcial + Daños Totales y Parciales por Accidente"},
+{ "id": 5, "nombre": "Cristales:", "texto": "Rotura de Cristales por accidente, por robo o su tentativa"},
+{ "id": 6, "nombre": "Robo de Ruedas:", "texto": "Robo de Ruedas, incluído el auxilio"},
+{ "id": 7, "nombre": "Granizo Parcial:", "texto": "Daños Parciales por Granizo"},
+{ "id": 8, "nombre": "Granizo Total:", "texto": "Daños Totales y Parciales por Granizo"},
+{ "id": 9, "nombre": "Grua:", "texto": "Servicio de Grua y Asistencia Mecanica al vehículo"}
+]

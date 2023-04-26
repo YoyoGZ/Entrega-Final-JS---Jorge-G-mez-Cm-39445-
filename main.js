@@ -18,7 +18,6 @@ const elecVh = (id) => {
 };
 
 let div = document.createElement("div");
-
 div.innerHTML = `
   <h2 class = "d-flex titudos">Seleccione el vehículo a cotizar</h2>
 `;
@@ -31,21 +30,6 @@ vehiculos.forEach((vehiculo) => {
   boton.id = vehiculo.id;
   boton.className = "botones";
   boton.addEventListener("click",() => elecVh(vehiculo.id),
-/*   Toastify({
-    text: "This is a toast",
-    duration: 5000,
-    destination: "https://github.com/apvarun/toastify-js",
-    newWindow: true,
-    close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "left", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
-    style: {
-      background: "linear-gradient(to right, #00b09b, #96c93d)",
-    },
-    onClick: function(){} // Callback after click
-  }).showToast() */
-  
   div.append(boton));
 });
 
@@ -69,7 +53,6 @@ let article1 = document.createElement("article1");
 article1.innerHTML = `
   <h2 class = "titudos">Elija la cobertura que prefiere cotizar</h2>
 `;
-
 contenedorB.append(article1);
 
 coberturas.forEach((cobertura) => {
@@ -82,6 +65,17 @@ coberturas.forEach((cobertura) => {
   article1.append(boton);
 });
 
+// ---- Fetch para Json local -------
+fetch("./datos.json")
+ .then(response => response.json())
+ .then(data => {
+    data.push(elecCob);
+    data.forEach(compara => {
+    if (data.id === elecCob.id);
+    const infoText = document.getElementById("infoText");
+    infoText.innerText = `${compara.nombre}: ${compara.texto}`
+  })
+});
 // ------- Botones de eleccion de adicionales ---------
 
 let contenedorC = document.getElementById("contenedorC");
@@ -90,7 +84,7 @@ let adicionales = [
   { id: 2, nombre:"Robo de Ruedas", precio: 1500 },
   { id: 3, nombre:"Granizo Parcial", precio: 2500 },
   { id: 4, nombre:"Granizo Total", precio: 4500 },
-  { id: 5, nombre:"Auxilio y Grua", precio: 1500 },
+  { id: 5, nombre:"Grua", precio: 1500 },
   { id: 6, nombre:"Sin Adicionales", precio: 0 },
 ];
 const elecAdic = (id) => {
@@ -117,6 +111,7 @@ adicionales.forEach((adicional) => {
   article2.append(boton);
   }
 );
+
 // -------  Comienza cotizador según la elección --------
 
 let cotiza = document.getElementById("cotiza");
@@ -146,13 +141,14 @@ cotiza.addEventListener("click", () => {
   const { vehiculo, cobertura, adicional } = mostrarElec();
   const cotizacionTotal = parseFloat(vehiculo.precio) + parseFloat(cobertura.precio) + parseFloat(adicional.precio);
 
-   let contenedor = document.getElementById("contenedorD");
-   contenedor.innerHTML = `
-     <p className = "titudos2"> Se seleccionó cotizar: ${vehiculo.nombre} Con una: ${cobertura.nombre}<br>
+   let contenedorD = document.getElementById("contenedorD");
+   let textoCoti = document.createElement("textoCoti");
+   textoCoti.innerHTML = `
+     <p className = "titudos2"> Se seleccionó cotizar: ${vehiculo.nombre} con una: ${cobertura.nombre}<br>
       Se incluyó un adicional de: ${adicional.nombre}<br>
       El precio total de la cotización es: $${cotizacionTotal}</p>
    `;
-    contenedor.append(contenedor); 
+    contenedorD.append(textoCoti); 
   }
 
 //  --------  Boton de Nueva Cotización ------
@@ -162,11 +158,12 @@ nuevaCot.addEventListener("click", () => {
   let limpia = document.getElementById("contenedorD");
     limpia.parentNode.removeChild(limpia);
     location.reload();
-  }
-)
+    localStorage.clear();
+  })
 console.log(nuevaCot);
 
 // ----- Inicia formulario -----
+
 
 let formulario = document.getElementById("formuCont");
 
@@ -174,11 +171,11 @@ formulario.addEventListener("submit", (e) => {
   e.preventDefault();
       let elEmail = document.getElementById("ingrEmail");
         if (elEmail.value.includes("@")) {
-        console.log("arroba");
+        console.log(elEmail);
         } else {
         elEmail.value = "";
         const errorMensaje = document.createElement('p');
-        errorMensaje.textContent = 'Por favor ingrese un correo electrónico válido'; 
+        errorMensaje.textContent = 'Por favor ingrese un correo electrónico válido';
         formulario.appendChild(errorMensaje);
       }
     });

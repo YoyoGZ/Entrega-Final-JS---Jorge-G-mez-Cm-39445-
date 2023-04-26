@@ -40,7 +40,7 @@ body {
 .botones {
   display: flex;
   display: inline;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: relative;
   color: black;
@@ -59,7 +59,7 @@ body {
 
 .btnNvaCot {
   display: flex;
-  align-items: right;
+  align-items: left;
   position: relative;
   justify-content: space-around;
   color: black;
